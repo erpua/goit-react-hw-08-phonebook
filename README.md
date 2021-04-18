@@ -53,6 +53,8 @@ ADDITIONAL ( + DEVTOOLS)
 - npm install --save-dev @reduxjs/toolkit
 - npm install --save-dev redux-logger
 - npm install --save-dev redux-persist
+- npm install --save-dev @material-ui/core
+- npm install --save-dev @material-ui/icons
 
 DEPLOY AT GITHUB
 
