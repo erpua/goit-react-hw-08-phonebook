@@ -25,14 +25,14 @@ export class RegisterView extends Component {
     const { name, email, password } = this.state;
     return (
       <div>
-        <h1>Сторінка реєстрації</h1>
+        <h1>Register Page</h1>
         <form
           onSubmit={this.handleSubmit}
           className={r.form}
           autoComplete="off"
         >
           <label className={r.label}>
-            Ім'я
+            Name
             <input
               type="text"
               name="name"
@@ -41,7 +41,7 @@ export class RegisterView extends Component {
             />
           </label>
           <label>
-            Поштова скринька
+            Email
             <input
               type="email"
               name="email"
@@ -50,7 +50,7 @@ export class RegisterView extends Component {
             />
           </label>
           <label>
-            Пароль
+            Password
             <input
               type="password"
               name="password"
@@ -58,7 +58,7 @@ export class RegisterView extends Component {
               onChange={this.handleChange}
             />
           </label>
-          <button type="submit">Реєстрація</button>
+          <button type="submit">Register</button>
         </form>
       </div>
     );

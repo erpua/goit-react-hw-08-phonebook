@@ -7,7 +7,7 @@ import n from './Navigation.module.css';
 const Navigation = ({ isAuthenticated }) => (
   <nav>
     <NavLink to="/" exact className={n.link} activeClassName={n.activeLink}>
-      Главная
+      Home
     </NavLink>
     {isAuthenticated && (
       <NavLink
@@ -16,7 +16,7 @@ const Navigation = ({ isAuthenticated }) => (
         className={n.link}
         activeClassName={n.activeLink}
       >
-        Контакти
+        Contacts
       </NavLink>
     )}
   </nav>

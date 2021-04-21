@@ -1,6 +1,7 @@
 .form {
-  width: 320px;
+  width: 300px;
 }
+
 .label {
   display: flex;
   flex-direction: column;

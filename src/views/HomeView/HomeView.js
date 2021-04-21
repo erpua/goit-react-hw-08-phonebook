@@ -1,12 +1,9 @@
 import React from 'react';
-import h from './HomeView.module.css';
+import styles from './HomeView.module.css';
 
 const HomeView = () => (
-  <div className={h.container}>
-    <h1 className={h.title}>Велкам ту ауа фелімі</h1>
-    <span role="img" aria-label="Welcome icon">
-      💻𝕵𝕾😎
-    </span>
+  <div className={styles.wrapper}>
+    <h1 className={styles.title}>Welcome ...</h1>
   </div>
 );
 

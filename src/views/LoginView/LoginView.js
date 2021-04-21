@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import authOperations from '../../redux/auth/auth-operations';
-import l from './LoginView.module.css';
+import styles from './LoginView.module.css';
 
 export class LoginView extends Component {
   state = {
     email: '',
     password: '',
   };
+
   handleChange = ({ target: { name, value } }) => {
     this.setState({ [name]: value });
   };
+
   handleSubmit = e => {
     e.preventDefault();
 
@@ -20,16 +22,17 @@ export class LoginView extends Component {
 
   render() {
     const { email, password } = this.state;
+
     return (
       <div>
-        <h1>Сторінка логіна</h1>
+        <h1>LogIn Page</h1>
         <form
           onSubmit={this.handleSubmit}
-          className={l.form}
+          className={styles.form}
           autoComplete="off"
         >
-          <label className={l.label}>
-            Поштова скринька
+          <label className={styles.label}>
+            Email
             <input
               type="email"
               name="email"
@@ -38,7 +41,7 @@ export class LoginView extends Component {
             />
           </label>
           <label>
-            Пароль
+            Password
             <input
               type="password"
               name="password"
@@ -46,7 +49,7 @@ export class LoginView extends Component {
               onChange={this.handleChange}
             />
           </label>
-          <button type="submit">Вхід</button>
+          <button type="submit">Enter</button>
         </form>
       </div>
     );

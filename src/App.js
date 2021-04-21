@@ -10,7 +10,7 @@ import LoginView from './views/LoginView/LoginView';
 import ContactsView from './views/ContactsView/ContactsView';
 import SignInView from './views/LoginView/SignInView';
 import SignUpView from './views/RegisterView/SignUpView'; */
-import './App.css';
+import './global.css';
 import PrivateRoute from './components/Routes/PrivateRoute';
 import PublicRoute from './components/Routes/PublicRoute';
 
@@ -28,7 +28,7 @@ class App extends Component {
     return (
       <div>
         <AppBar />
-        <Suspense fallback={<p>Downloading...</p>}>
+        <Suspense fallback={<h2> ... Downloading ...</h2>}>
           <Switch>
             <PublicRoute exact path="/" component={HomeView} />
             <PublicRoute
