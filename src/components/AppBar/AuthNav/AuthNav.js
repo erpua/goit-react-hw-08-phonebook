@@ -18,7 +18,7 @@ const AuthNav = () => (
       className={styles.link}
       activeClassName={styles.activeLink}
     >
-      LogIn
+      Log In
     </NavLink>
   </div>
 );

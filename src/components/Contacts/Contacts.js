@@ -65,13 +65,13 @@ const Contacts = ({
   };
 
   return (
-    <ul className="container">
-      <p>number of contacts {totalContacts}</p>
-      {isLoading && <h1>Загрузка</h1>}
+    <ul>
+      <p>Saved contacts {totalContacts}</p>
+      {isLoading && <h1>Downloading ...</h1>}
       {contacts.map(({ name, number, id }) => (
         <li key={id} className={styles.link}>
           {inEditMode.status && inEditMode.rowKey === id ? (
-            <>
+            <div>
               <form>
                 <input
                   className={styles.editInput}
@@ -79,8 +79,7 @@ const Contacts = ({
                   onChange={event => setUnitName(event.target.value)}
                   type="text"
                   name="name"
-                  placeholder="Name"
-                  title="Ім'я може містити тільки букви, апострофи, тире і пробіли. Наприклад Буся, Буся Красотуся, Буся ля Красотуся і т.д."
+                  title="The name can only contain letters, apostrophes, dashes and spaces."
                   required
                   pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
                 />
@@ -90,14 +89,14 @@ const Contacts = ({
                   value={unitNumber}
                   name="number"
                   onChange={event => setUnitNumber(event.target.value)}
-                  placeholder="Number"
-                  title="Номер телефона повинен складатися з 11-12 цифр і може містити цифри, пробіли, тире, пузаті скобки і може починатися з +"
+                  title="The phone number must be 11-12 digits and can contain numbers, spaces, dashes, bully brackets and can start with +"
                   required
                   pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                 />
               </form>
+
               <button
-                className={'btn-success'}
+                className={styles.save}
                 onClick={() =>
                   onSave({
                     id: id,
@@ -109,20 +108,20 @@ const Contacts = ({
                 Save
               </button>
               <button
-                className={'btn-secondary'}
+                className={styles.cancel}
                 style={{ marginLeft: 18 }}
                 onClick={() => onCancel()}
               >
                 Cancel
               </button>
-            </>
+            </div>
           ) : (
             <>
               <p>{name}</p>
               <p>{number}</p>
               <div className={styles.btnContainer}>
                 <button
-                  className={'btn-primary'}
+                  className={styles.edit}
                   onClick={() =>
                     onEdit({
                       id: id,
@@ -134,8 +133,7 @@ const Contacts = ({
                   Edit
                 </button>
                 <button
-                  style={{ marginLeft: 18 }}
-                  className={'btn-primary'}
+                  className={styles.delete}
                   onClick={() => deleteContact(id)}
                 >
                   Delete

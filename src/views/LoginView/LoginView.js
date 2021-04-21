@@ -25,7 +25,7 @@ export class LoginView extends Component {
 
     return (
       <div>
-        <h1>LogIn Page</h1>
+        <h1>Log In Page</h1>
         <form
           onSubmit={this.handleSubmit}
           className={styles.form}

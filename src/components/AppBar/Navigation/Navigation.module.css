@@ -1,11 +1,12 @@
 .link {
+  color: white;
   display: inline-block;
   text-decoration: none;
-  padding: 12px;
-  font-weight: 700;
-  color: whitesmoke;
+  padding: 14px;
+  font-size: 26px;
+  font-weight: bold;
 }
 
 .activeLink {
-  color: #e84a5f;
+  color: red;
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import authOperations from '../../redux/auth/auth-operations';
-import r from './RegisterView.module.css';
+import styles from './RegisterView.module.css';
 
 export class RegisterView extends Component {
   state = {
@@ -28,10 +28,10 @@ export class RegisterView extends Component {
         <h1>Register Page</h1>
         <form
           onSubmit={this.handleSubmit}
-          className={r.form}
+          className={styles.form}
           autoComplete="off"
         >
-          <label className={r.label}>
+          <label className={styles.label}>
             Name
             <input
               type="text"
