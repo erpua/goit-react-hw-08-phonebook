@@ -61,7 +61,7 @@ DEPLOY AT GITHUB
 - npm install --save-dev gh-pages
 - in package.json => - scripts => "homepage":
   "https://myusername.github.io/my-app"add to package.json => change to
-  =>"homepage": "https://erpua.github.io/goit-react-hw-07-phonebook";
+  =>"homepage": "https://erpua.github.io/goit-react-hw-08-phonebook";
 - in package.json => add scripts: "predeploy": "npm run build", "deploy":
   "gh-pages -d build" => "scripts": { "start": "react-scripts start", "build":
   "react-scripts build", "test": "react-scripts test", "eject": "react-scripts
